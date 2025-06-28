@@ -1,0 +1,690 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset básico e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Paleta de Cores, como sugerido no guia */
+  --primary-color: #2a7a94; /* Azul Petróleo para confiança */
+  --secondary-color: #f7a072; /* Laranja para CTAs e destaques */
+  --background-color: #f8f9fa; /* Fundo cinza bem claro */
+  --text-color: #333; /* Cor do texto principal */
+  --light-color: #ffffff; /* Branco */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header principal da navegação */
+header:not(.page-header) {
+  background-color: var(--light-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header:not(.page-header) .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header:not(.page-header) .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+header:not(.page-header) nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header:not(.page-header) nav ul li {
+  margin-left: 20px;
+}
+
+header:not(.page-header) nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header:not(.page-header) nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Estilo para a imagem dentro do link do logo */
+.logo img {
+  height: 50px; /* Define a altura do logo. A largura se ajustará automaticamente */
+  vertical-align: middle; /* Garante um bom alinhamento vertical com o menu */
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+}
+
+/* NOVO CÓDIGO para a seção Hero */
+#hero {
+  /* 1. Usamos a nossa nova imagem */
+  background-image: url('img/banner-topo.jpg');
+
+  /* 2. Mantemos o 'cover' para preencher a área */
+  background-size: cover;
+
+  /* 3. Ajustamos a posição! 'center bottom' garante que o rosto do cão fique na base */
+  background-position: center bottom;
+
+  /* 4. Mudamos a cor do texto para contrastar com o fundo branco da imagem */
+  color: var(--primary-color); /* Usando nosso azul principal */
+
+  text-align: center;
+  padding: 60px 0 200px 0; /* Ajustamos o padding para dar mais espaço acima do cão */
+}
+
+/* Estilos para a caixa de conteúdo da seção hero */
+.hero-content {
+  /* Cor de fundo branca com 85% de opacidade (15% de transparência) */
+  background-color: rgba(255, 255, 255, 0.85);
+
+  padding: 30px; /* Espaçamento interno para o texto não colar nas bordas */
+  border-radius: 8px; /* Cantos arredondados para um visual mais suave */
+
+  /* Uma sombra sutil para dar a impressão de que a caixa está "flutuando" */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  /* Garante que o texto dentro da caixa não se estique demais em telas grandes */
+  max-width: 700px;
+  margin: 0 auto 30px auto; /* Centraliza a caixa e adiciona uma margem inferior de 30px para separá-la do botão */
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  color: #23606a; /* Azul petróleo mais escuro para contraste */
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color); /* Fundo laranja no hover */
+  color: var(--light-color);
+}
+
+/* Estilo para o botão secundário */
+/* NOVO CÓDIGO */
+.cta-button.secondary {
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color); /* Borda azul petróleo */
+  color: var(--light-color);
+}
+
+.cta-button.secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
+/* Estilos comuns para as seções */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* Estilos para os cards */
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card,
+.product-card {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  flex-basis: 30%; /* Cada card tenta ocupar 30% da largura */
+  min-width: 300px; /* Largura mínima para evitar que fiquem muito estreitos */
+  overflow: hidden; /* ESSENCIAL: Garante que a imagem respeite os cantos arredondados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito hover */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover,
+.product-card:hover {
+  transform: translateY(
+    -10px
+  ); /* "Levanta" o card quando o mouse passa por cima */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para dar mais profundidade */
+}
+
+.card img {
+  width: 100%;
+  height: 250px; /* ou ajuste conforme preferir */
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff; /* Garante fundo branco ao redor da imagem */
+}
+
+/* Novo seletor para o conteúdo de texto */
+.card-content {
+  padding: 20px 30px 30px 30px; /* Adiciona o espaçamento apenas no conteúdo de texto */
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.card a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+/* Estilos específicos para os depoimentos */
+#testimonials {
+  background-color: #eaf3f5; /* Um azul bem clarinho */
+}
+
+#testimonials .card {
+  border-left: 5px solid var(--secondary-color);
+  text-align: left;
+}
+
+#testimonials blockquote {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+#testimonials cite {
+  font-weight: 600;
+}
+
+/* ==================== RODAPÉ (FOOTER) ==================== */
+
+footer {
+  background-color: #333; /* Um cinza escuro, mais neutro que o roxo */
+  color: #a7a7a7; /* Cor de texto cinza claro para boa legibilidade */
+  padding-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite quebrar em telas menores */
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+.footer-section {
+  flex: 1; /* Faz as colunas tentarem ocupar o mesmo espaço */
+  width: 100px; /* Largura mínima para cada coluna */
+}
+
+.footer-section h3 {
+  color: var(--light-color); /* Branco para os títulos */
+  margin-bottom: 20px;
+}
+
+/* Estilo específico para a coluna "Sobre" */
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.logo-footer img {
+  height: 40px;
+}
+
+.logo-footer span {
+  color: var(--light-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.footer-text {
+  color: var(--light-color);
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.socials a {
+  color: #a7a7a7;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--secondary-color); /* Laranja no hover para dar um toque de cor */
+}
+
+/* Estilo para a coluna "Links" */
+.links ul {
+  list-style: none;
+}
+
+.links ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  color: var(--light-color);
+}
+
+/* Estilo para a coluna "Contato" */
+.contact {
+  width: 200px;
+  /* gap: 100px; */
+}
+
+.contact p {
+  margin-bottom: 10px;
+}
+
+.contact p i {
+  margin-right: 10px;
+  color: var(--secondary-color); /* Ícones de contato em laranja */
+}
+
+/* Barra inferior do rodapé */
+.footer-bottom {
+  background-color: #222; /* Um cinza ainda mais escuro para a barra */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* ========== MEDIA QUERIES (RESPONSIVIDADE) ========== */
+@media (max-width: 768px) {
+  /* Estilos para telas de até 768px de largura (tablets e celulares) */
+
+  header:not(.page-header) .container {
+    flex-direction: column;
+  }
+
+  header:not(.page-header) nav ul {
+    margin-top: 15px;
+    padding: 0;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .service-cards,
+  .testimonial-cards {
+    flex-direction: column; /* Faz os cards ficarem um embaixo do outro */
+  }
+
+  .card,
+  .product-card {
+    flex-basis: 100%; /* Cards ocupam toda a largura em mobile */
+    min-width: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-item,
+  .service-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .service-item img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Estilos para telas muito pequenas (smartphones) */
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .card-content {
+    padding: 15px 20px 20px 20px;
+  }
+}
+
+/* ==================== PÁGINA SOBRE ==================== */
+
+.page-header {
+  background-color: #f4f4f4; /* Fundo cinza claro para o título da página */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--primary-color);
+  font-size: 2.8rem;
+}
+
+.about-page-content {
+  padding: 60px 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1; /* Ocupa metade do espaço */
+}
+
+.about-text h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.about-image {
+  flex: 1; /* Ocupa a outra metade */
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== PÁGINA CONTATO ==================== */
+
+.contact-page-content {
+  padding: 60px 0;
+}
+
+.contact-page-wrapper {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap-reverse; /* Quebra a linha e inverte a ordem em telas menores */
+}
+
+.contact-form-container {
+  flex: 2; /* Faz o formulário ocupar 2/3 do espaço */
+  min-width: 300px;
+}
+
+.contact-info-container {
+  flex: 1; /* Faz as informações/mapa ocupar 1/3 do espaço */
+  min-width: 300px;
+}
+
+.contact-form-container h2,
+.contact-info-container h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Estilo do Formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(76, 42, 76, 0.3);
+}
+
+.contact-form .cta-button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo das Informações e Mapa */
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-info p i {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* Proporção 4:3 para o mapa */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================== PÁGINA SERVIÇOS ==================== */
+
+.services-list-section {
+  padding: 60px 0;
+}
+
+.services-grid {
+  display: grid;
+  gap: 40px; /* Espaçamento entre os cards */
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+/* Inverte a ordem da imagem e texto em cards ímpares para um layout "zig-zag" */
+.service-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.service-item img {
+  width: 40%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 30px;
+  flex: 1; /* Faz o conteúdo de texto ocupar o espaço restante */
+}
+
+.service-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.service-content p {
+  margin-bottom: 25px;
+}
+
+/* ==================== PÁGINA PRODUTOS ==================== */
+
+.products-section {
+  padding: 60px 0;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os cards na linha */
+  gap: 30px; /* Espaçamento entre os cards */
+}
+
+/* Renomeamos a regra da imagem para ser mais específica */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 420px; /* ajuste conforme necessário */
+}
+
+.product-card .img-container {
+  width: 100%;
+  height: 250px; /* altura fixa para o espaço da imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* ESSENCIAL: Garante que a imagem respeite os cantos arredondados */
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px; /* Aplica o mesmo border-radius na imagem também */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary-color); /* Destaque para o preço! */
+  margin-bottom: 20px;
+}
+
+.product-info .cta-button {
+  margin-top: auto;
+}

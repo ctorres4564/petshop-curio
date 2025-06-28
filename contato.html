@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Curió</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/curio.jpeg" alt="Logo Curió" />Curió
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Cabeçalho da Página Contato -->
+      <header class="page-header">
+        <div class="container">
+          <h1>Entre em Contato</h1>
+        </div>
+      </header>
+
+      <!-- Conteúdo Principal da Página Contato -->
+      <section class="contact-page-content">
+        <div class="container contact-page-wrapper">
+          <!-- Coluna da Esquerda: Informações e Formulário -->
+          <div class="contact-form-container">
+            <h2>Envie uma Mensagem</h2>
+            <p>
+              Tem alguma dúvida, sugestão ou quer agendar um serviço? Preencha o
+              formulário abaixo e nossa equipe responderá o mais rápido
+              possível.
+            </p>
+
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Seu Nome</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Seu E-mail</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Sua Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="cta-button">Enviar Mensagem</button>
+            </form>
+          </div>
+
+          <!-- Coluna da Direita: Informações e Mapa -->
+          <div class="contact-info-container">
+            <h3>Nossas Informações</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Rua dos Pets, 123 - Bairro
+                Animal, São Paulo - SP
+              </p>
+              <p><i class="fas fa-phone"></i> (11) 99999-8888</p>
+              <p><i class="fas fa-envelope"></i> contato@patasecia.com.br</p>
+              <p><i class="fas fa-clock"></i> Seg a Sáb: 9h - 18h</p>
+            </div>
+
+            <h3>Nossa Localização</h3>
+            <div class="map-container">
+              <!-- Mapa do Google Maps -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197576449102!2d-46.65882298543793!3d-23.56133936748466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1624482594513!5m2!1spt-BR!2sbr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <!-- 1. Div principal para o conteúdo do rodapé (com colunas) -->
+        <div class="footer-content">
+          <!-- Coluna 1: Links Rápidos -->
+          <div class="footer-section links">
+            <h3>Links Rápidos</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="produtos.html">Produtos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+          <!-- Coluna 2: Sobre e Redes Sociais -->
+          <div class="footer-section about">
+            <a href="index.html" class="logo-footer">
+              <img src="img/curio.jpeg" alt="Logo Curió" />
+              <span>Curió</span>
+            </a>
+            <p class="footer-text">
+              Onde o cuidado e o carinho encontram o seu melhor amigo. Tudo o
+              que seu pet precisa em um só lugar.
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Coluna 3: Contato -->
+          <div class="footer-section contact">
+            <h3>Contato</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Rua dos Pets, 123 - Bairro
+              Animal
+            </p>
+            <p><i class="fas fa-phone"></i> (11) 99999-8888</p>
+            <p><i class="fas fa-envelope"></i> contato@patasecia.com.br</p>
+          </div>
+        </div>
+      </div>
+      <!-- 2. Barra inferior com os direitos autorais -->
+      <div class="footer-bottom">
+        <p>© 2025 Curió | Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
