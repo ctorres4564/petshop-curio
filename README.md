@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # 🐾 Curió - Petshop
 
-Um site moderno e responsivo para um petshop fictício chamado "Curió", desenvolvido com HTML5, CSS3 e JavaScript. O projeto apresenta uma interface elegante e funcional para exibir produtos, serviços e informações sobre o estabelecimento.
+Um site moderno e responsivo para um petshop fictício chamado "Curió", desenvolvido com HTML5 e CSS3. O projeto apresenta uma interface elegante e funcional para exibir produtos, serviços e informações sobre o estabelecimento.
 
 ## 📋 Índice
 
@@ -100,12 +100,8 @@ petshop/
     ├── coleira.png         # Imagem de coleira
     ├── petisco.png         # Imagem de petisco
     ├── arranhador.png      # Imagem de arranhador
-    └── marcas/             # Pasta com logos das marcas
-        ├── AlfaPet.png
-        ├── BichinhoChic.png
-        ├── Boehringer.png
-        └── ... (outras marcas)
-```
+    
+      
 
 ## 🚀 Como Usar
 
@@ -242,7 +238,7 @@ Este projeto está sob a licença **MIT**. Veja o arquivo `LICENSE` para mais de
 
 - 📍 Rua dos Pets, 123 - Bairro Animal
 - 📞 (11) 99999-8888
-- 📧 contato@patasecia.com.br
+- 📧 contato@curio.com.br
 - 🌐 [Website](https://curio-petshop.com)
 
 ---
@@ -314,7 +310,6 @@ O **Curió** é um site completo para um petshop que oferece uma experiência di
 
 - **HTML5** - Estrutura semântica e acessível
 - **CSS3** - Estilização moderna com Flexbox e Grid
-- **JavaScript** - Interatividade e funcionalidades dinâmicas
 - **Font Awesome** - Ícones profissionais
 - **Google Fonts** - Tipografia moderna (Poppins)
 - **Design Responsivo** - Adaptação para mobile, tablet e desktop
@@ -344,12 +339,6 @@ petshop/
     ├── coleira.png         # Imagem de coleira
     ├── petisco.png         # Imagem de petisco
     ├── arranhador.png      # Imagem de arranhador
-    └── marcas/             # Pasta com logos das marcas
-        ├── AlfaPet.png
-        ├── BichinhoChic.png
-        ├── Boehringer.png
-        └── ... (outras marcas)
-```
 
 ## 🚀 Como Usar
 
